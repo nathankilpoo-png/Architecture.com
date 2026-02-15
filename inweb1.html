@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nathan Kilpoo — Architectural Drafter & Digital Entrepreneur</title>
+  <meta name="description" content="Portfolio and digital store for Nathan Kilpoo — AutoCAD/Archicad drafting, carpentry, masonry, and downloadable starter packs." />
+
+  <style>
+    :root{
+      --brand:#0077cc;
+      --brand-dark:#005fa3;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --page-bg:#f7fafc;
+      --radius:10px;
+      --max-width:1100px;
+      --accent:#ffd166;
+    }
+
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#111; background:var(--page-bg); line-height:1.5}
+    a{color:inherit}
+    header{background:linear-gradient(180deg,var(--brand) 0%, var(--brand-dark) 100%); color:#fff; padding:44px 20px; text-align:center;}
+    header h1{margin:0;font-size:28px;letter-spacing:0.2px}
+    header p{margin:8px 0 0;opacity:0.95}
+    .container{max-width:var(--max-width);margin:28px auto;padding:0 18px}
+    nav{display:flex;gap:12px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+    nav a{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.06);color:#fff;text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin-top:22px}
+    .hero .intro{background:var(--card-bg);padding:22px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+    .hero h2{margin:0 0 8px;font-size:22px}
+    .hero p{margin:0;color:var(--muted)}
+    .hero img{width:100%;height:260px;object-fit:cover;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.08)}
+    section{margin-top:28px}
+    h2.section-title{font-size:20px;margin:0 0 12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card-bg);border-radius:12px;padding:0;overflow:hidden;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+    .card img{width:100%;height:180px;object-fit:cover;display:block}
+    .card .body{padding:14px}
+    .card .body strong{display:block;margin-bottom:8px}
+    .card .body p{margin:0;color:var(--muted);font-size:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;font-weight:800;color:#fff;text-decoration:none;transition:transform .14s ease,box-shadow .14s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-dark));box-shadow:0 10px 30px rgba(0,119,204,0.14)}
+    .btn-outline{background:transparent;border:2px solid var(--brand);color:var(--brand);padding:10px 16px;border-radius:999px;font-weight:700}
+    .btn-card{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#111827;color:#fff;border-radius:10px;text-decoration:none}
+    .price-badge{background:var(--accent);color:#111;padding:6px 10px;border-radius:8px;font-weight:800}
+    .btn-icon{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#111827;color:#fff;border-radius:10px;text-decoration:none}
+    .store-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .muted{color:var(--muted)}
+    form{background:var(--card-bg);padding:18px;border-radius:12px;border:1px solid rgba(15,23,42,0.04)}
+    label{display:block;font-weight:700;margin-bottom:6px;font-size:13px}
+    input[type="text"],input[type="nathankilpoo@gmail.com"],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-bottom:12px;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+    .testimonial{padding:16px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(2,6,23,0.04)}
+    .client-logos{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .client-logos img{height:48px;object-fit:contain;filter:grayscale(0.05);opacity:0.95}
+    .comments-list{display:flex;flex-direction:column;gap:12px}
+    .comment{background:#fff;padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.04)}
+    .payout-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start}
+    .bank-details{background:#fff;padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.04)}
+    .donation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start}
+    .donation-tier{padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.04);background:#fff}
+    .donation-tier strong{display:block;margin-bottom:8px}
+    .donation-note{font-size:13px;color:var(--muted);margin-top:8px}
+    footer{margin-top:36px;padding:22px 0;text-align:center;color:var(--muted);font-size:14px}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.hero img{height:200px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Precision in Design, Strength in Craft</h1>
+    <p>Multidisciplinary Architectural Drafter • 3D Modeler • Digital Entrepreneur</p>
+
+    <nav aria-label="Main navigation">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#store">Store</a>
+      <a href="#client-work">Client Work</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#payout">Payout & Withdraw</a>
+      <a href="#donate">Donate</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header> <!-- Social Links -->
+  <section class="social">
+    <h3>Connect With Me On</h2>
+    <a href="https://www.youtube.com/@nathany.nkilpoo5624?si=hJhESj3XqEgfmOsA" target="_blank">YouTube</a>
+    
+<!-- Social Links -->
+  <section class="social">
+    <h3>Connect With Me On</h2>
+    <a href="https://www.facebook.com/nathan.n.y.kilpoo.2025" target="_blank">FACEBOOK</a>
+    
+  <main class="container">
+    <!-- Hero -->
+    <div class="hero" style="margin-bottom:6px">
+      <div class="intro card">
+        <h2 class="section-title">Hi — I'm Nathan Kilpoo</h2>
+        <p>I combine AutoCAD & Archicad drafting with hands-on carpentry and masonry experience in Monrovia, Liberia. I create construction-ready drawings, 3D visualizations, and practical digital products for students, freelancers, and builders worldwide.</p>
+
+        <div class="store-actions" style="margin-top:14px">
+          <a class="btn btn-primary" href="https://your-payment-link.example?redirect=https://your-site.netlify.app/thank-you" aria-label="Buy AutoCAD Starter Pack">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Buy AutoCAD Starter Pack — $12
+          </a>
+
+          <a class="btn btn-outline" href="#portfolio" aria-label="View portfolio">View Portfolio</a>
+
+          <a class="btn-icon" href="ABHARRIS WORK2.PDF" download aria-label="Download sample template">
+            <svg width="20" height="16" viewBox="1 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 11l4 4 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download Free Sample
+          </a>
+        </div>
+      </div>
+
+      <img src="images/mm.png" alt="Architectural drafting and construction overview" />
+    </div>
+
+    <!-- Portfolio -->
+    <section id="portfolio" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title" class="section-title">Portfolio</h2>
+      <p class="small">Selected work: technical drawings, on-site craftsmanship, and visualization samples.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <article class="card" aria-labelledby="fp-title">
+          <img src="sam.png"with="120 hight="100" alt="Sample floor plan drawing" />
+          <div class="body">
+            <strong id="fp-title">Floor Plan Example</strong>
+            <p>Clean AutoCAD floor plan with dimensions, annotations, and client-ready layout.</p>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="roof-title">
+          <img src="CV1.pNg"with="120 hight="100" alt="Roof detail drawing" />
+          <div class="body">
+            <strong id="roof-title">Roof Detail</strong>
+            <p>Construction-ready roof section and detail for local building conditions.</p>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="carp-title">
+          <img src="funiture.png"with="120 hight="100" alt="Carpentry project photo" />
+          <div class="body">
+            <strong id="carp-title">Carpentry Project</strong>
+            <p>Custom furniture and joinery showcasing practical craftsmanship and finish quality.</p>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="masonry-title">
+          <img src="res.jpg"with="120 hight="100" alt="Masonry work photo" />
+          <div class="body">
+            <strong id="masonry-title">Masonry Work</strong>
+            <p>Block laying, plastering, and finishing examples from local construction projects.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Client Work -->
+    <section id="client-work" aria-labelledby="client-work-title">
+      <h2 id="client-work-title" class="section-title">Client Work</h2>
+      <p class="small">Projects completed for clients, contractors, and small developers.</p>
+
+      <div class="card" style="padding:14px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <strong>Selected Clients</strong>
+            <p class="muted" style="margin:6px 0 0">Local contractors, small developers, and private homeowners.</p>
+          </div>
+          <div class="client-logos" aria-hidden="true">
+            <img src="images/logo-client1.png" alt="Client 1 logo" />
+            <img src="images/logo-client2.png" alt="Client 2 logo" />
+            <img src="images/logo-client3.png" alt="Client 3 logo" />
+            <img src="images/logo-client4.png" alt="Client 4 logo" />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <img src="resi.jpg"with="120 hight="100" alt="Residential project" />
+          <div class="body">
+            <strong>Residential Duplex — Monrovia</strong>
+            <p>Full set of construction drawings, roof details, and on-site coordination with masonry team. Delivered working drawings and 3D visual for client approval.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/project-commercial.jpg" alt="Commercial project" />
+          <div class="body">
+            <strong>Small Commercial Block — Paynesville</strong>
+            <p>Layout optimization, structural detail coordination, and finish schedules for a local retail block. Assisted contractor with material takeoffs.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="funiture.png"with="120 hight="100" alt="Custom furniture project" />
+          <div class="body">
+            <strong>Custom Joinery Package</strong>
+            <p>Design and shop drawings for custom furniture and built-ins. Supplied cutting lists and assembly details for the workshop team.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="mm.png"with="120 hight="100" alt="3D visualization" />
+          <div class="body">
+            <strong>3D Visualization & Presentation</strong>
+            <p>Rendered views and client presentation pack used to secure project funding and approvals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback & Testimonials -->
+    <section id="feedback" aria-labelledby="feedback-title">
+      <h2 id="feedback-title" class="section-title">Feedback & Testimonials</h2>
+      <p class="small">What clients and learners say about working with me.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="testimonial card">
+          <div class="body">
+            <strong>“Clear, practical, and fast.”</strong>
+            <p class="muted">“Nathan delivered construction drawings that were easy for our contractor to follow. The roof detail saved us time and cost.” — <em>Samuel K., Contractor</em></p>
+          </div>
+        </div>
+
+        <div class="testimonial card">
+          <div class="body">
+            <strong>“Great teaching materials.”</strong>
+            <p class="muted">“The AutoCAD Starter Pack helped our students complete assignments faster. Highly recommended.” — <em>Grace T., Instructor</em></p>
+          </div>
+        </div>
+
+        <div class="testimonial card">
+          <div class="body">
+            <strong>“Professional and reliable.”</strong>
+            <p class="muted">“Delivered on time and provided helpful on-site advice during construction.” — <em>Emmanuel B., Developer</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:18px">
+        <div>
+          <h3 style="margin:0 0 10px">Recent Comments</h3>
+          <div class="comments-list">
+            <div class="comment">
+              <strong>Linda M.</strong>
+              <p class="muted" style="margin:6px 0 8px">“The starter templates were exactly what I needed for my first client.”</p>
+              <small class="muted">Feb 2, 2026</small>
+            </div>
+
+            <div class="comment">
+              <strong>Joseph A.</strong>
+              <p class="muted" style="margin:6px 0 8px">“Helpful layer cheat sheet — saved me hours.”</p>
+              <small class="muted">Jan 18, 2026</small>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="margin:0 0 10px">Leave a Comment</h3>
+          <form name="comment" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="comment" />
+            <p style="display:none">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" required placeholder="Your name" />
+
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" required placeholder="you@example.com" />
+
+            <label for="c-message">Comment</label>
+            <textarea id="c-message" name="message" required placeholder="Share your experience or feedback"></textarea>
+
+            <div style="display:flex;gap:10px;align-items:center">
+              <button type="submit" class="btn btn-primary" style="border:none">Post Comment</button>
+              <a class="btn-outline" href="#contact">Request a Quote</a>
+            </div>
+            <p class="small" style="margin-top:10px">Comments are moderated and may appear after review.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payout & Withdraw -->
+    <section id="payout" aria-labelledby="payout-title">
+      <h2 id="payout-title" class="section-title">Payout & Withdraw</h2>
+      <p class="small">Choose how you want to receive payments from Upwork, direct clients, or product sales. Replace the placeholder links and bank details with your real accounts and payment URLs.</p>
+
+      <div class="payout-grid" style="margin-top:12px">
+        <div class="card">
+          <img src="images/payoneer.jpg" alt="Payoneer" />
+          <div class="body">
+            <strong>Payoneer (Recommended)</strong>
+            <p>Receive marketplace payouts to Payoneer, then withdraw to your Ecobank account or debit card.</p>
+            <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+              <a class="btn btn-primary" href="https://payoneer.com/signup" target="_blank" rel="noopener">Open Payoneer Account</a>
+              <a class="btn btn-outline" href="#bank-info">Link Bank Details</a>
+            </div>
+            <div style="margin-top:10px" class="muted">
+              <strong>Typical flow:</strong> Upwork → Payoneer → Local bank (Ecobank) or debit card.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/bank-transfer.jpg" alt="Bank transfer" />
+          <div class="body">
+            <strong>Direct Bank Transfer</strong>
+            <p>Provide your bank details to receive direct transfers (where supported). Use this for client wire transfers or bank payouts from Payoneer.</p>
+
+            <div class="bank-details" id="bank-info" style="margin-top:10px">
+              <strong>Example Bank Details (replace with yours)</strong>
+              <p class="muted" style="margin:6px 0 0">
+                <strong>Bank:</strong> Ecobank Liberia<br/>
+                <strong>Account Name:</strong> Nathan Kilpoo<br/>
+                <strong>Account Number:</strong> 0000000000<br/>
+                <strong>SWIFT / BIC:</strong> ECOBLRXXXX<br/>
+                <strong>Branch:</strong> Monrovia
+              </p>
+              <p class="small" style="margin-top:8px">Share these details with clients or use them when withdrawing from Payoneer.</p>
+            </div>
+
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <a class="btn btn-card" href="mailto:yourname@example.com?subject=Bank%20Transfer%20Payment" aria-label="Request bank transfer">
+                <span style="font-weight:800">Request Bank Transfer</span>
+                <span class="price-badge">Free</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/card-payments.jpg" alt="Card payments" />
+          <div class="body">
+            <strong>Debit / Credit Card Payouts</strong>
+            <p>Accept card payments from clients and receive payouts to your bank or card via a payment gateway (Flutterwave, Stripe, etc.). Good for instant client payments and product sales.</p>
+
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <a class="btn btn-primary" href="https://flutterwave.com/" target="_blank" rel="noopener">Set up Flutterwave</a>
+              <a class="btn btn-outline" href="https://stripe.com/" target="_blank" rel="noopener">Set up Stripe</a>
+            </div>
+
+            <p class="small" style="margin-top:10px">Use the gateway's dashboard to link your Ecobank account or card for payouts. Fees and availability vary by provider.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/paypal.jpg" alt="PayPal" />
+          <div class="body">
+            <strong>PayPal (If Available)</strong>
+            <p>PayPal is useful for international clients, but availability in Liberia may be limited. If you have a PayPal account, you can withdraw to linked bank accounts or cards where supported.</p>
+
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <a class="btn btn-primary" href="https://www.paypal.com/signup" target="_blank" rel="noopener">Open PayPal</a>
+              <a class="btn btn-outline" href="#contact" aria-label="Contact for PayPal help">Contact for Help</a>
+            </div>
+
+            <p class="small" style="margin-top:10px">If PayPal is not available locally, use Payoneer or a card gateway instead.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="card">
+        <div class="body">
+          <strong>Quick Withdraw / Payout Request</strong>
+          <p class="muted">Clients can use this form to request a payout to your preferred method. You will receive an email with the request details.</p>
+
+          <form name="payout-request" method="POST" data-netlify="true" style="margin-top:12px">
+            <input type="hidden" name="form-name" value="payout-request" />
+            <label for="payer-name">Payer Name</label>
+            <input id="payer-name" name="payer_name" type="text" required placeholder="Client or company name" />
+
+            <label for="amount">Amount (USD)</label>
+            <input id="amount" name="amount" type="text" required placeholder="e.g., 150.00" />
+
+            <label for="method">Preferred Payout Method</label>
+            <select id="method" name="method" required>
+              <option value="payoneer">Payoneer</option>
+              <option value="bank">Bank Transfer</option>
+              <option value="card">Card (Flutterwave/Stripe)</option>
+              <option value="paypal">PayPal</option>
+            </select>
+
+            <label for="notes">Notes (optional)</label>
+            <textarea id="notes" name="notes" placeholder="Any special instructions"></textarea>
+
+            <div style="display:flex;gap:10px;align-items:center">
+              <button type="submit" class="btn btn-primary" style="border:none">Send Payout Request</button>
+              <a class="btn-outline" href="#contact">Contact Me</a>
+            </div>
+            <p class="small" style="margin-top:10px">I will confirm the payout details and send an invoice or payment link as needed.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" aria-labelledby="donate-title">
+      <h2 id="donate-title" class="section-title">Support My Work — Donate</h2>
+      <p class="small">If my templates, guides, or tutorials have helped you, your donation keeps this work going. Choose a one-time gift or set up a recurring contribution. All donations are voluntary — thank you for your support.</p>
+
+      <div class="donation-grid" style="margin-top:12px">
+        <!-- Donation Tiers -->
+        <div class="donation-tier">
+          <strong>Small Support</strong>
+          <p class="muted">A small contribution helps cover hosting and tool costs.</p>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <a class="btn btn-primary" href="https://your-payment-link.example?donation=5" aria-label="Donate $5">Donate $5</a>
+            <a class="btn btn-outline" href="https://your-payment-link.example?donation=10" aria-label="Donate $10">Donate $10</a>
+          </div>
+          <p class="donation-note">Suggested: $5–$10</p>
+        </div>
+
+        <div class="donation-tier">
+          <strong>Supporter</strong>
+          <p class="muted">Helps fund new templates, tutorials, and free samples for students.</p>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <a class="btn btn-primary" href="https://your-payment-link.example?donation=25" aria-label="Donate $25">Donate $25</a>
+            <a class="btn btn-outline" href="https://your-payment-link.example?donation=50" aria-label="Donate $50">Donate $50</a>
+          </div>
+          <p class="donation-note">Suggested: $25–$50</p>
+        </div>
+
+        <div class="donation-tier">
+          <strong>Patron</strong>
+          <p class="muted">Sustains ongoing development and supports free community resources.</p>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <a class="btn btn-primary" href="https://your-payment-link.example?donation=100" aria-label="Donate $100">Donate $100</a>
+            <a class="btn btn-outline" href="https://your-payment-link.example?donation=250" aria-label="Donate $250">Donate $250</a>
+          </div>
+          <p class="donation-note">Suggested: $100+</p>
+        </div>
+
+        <!-- Donation Methods -->
+        <div class="card" style="padding:12px">
+          <strong>Donation Methods</strong>
+          <p class="muted" style="margin-top:8px">Choose a method below. Replace links with your actual donation URLs or hosted payment pages.</p>
+
+          <ul style="margin:10px 0 0;padding-left:18px;color:var(--muted)">
+            <li><strong>Flutterwave / Card:</strong> Instant card donations via Flutterwave checkout. <a href="https://flutterwave.com/" target="_blank" rel="noopener">Set up</a></li>
+            <li><strong>Payoneer / Bank:</strong> One-time bank transfer or Payoneer payout. Use bank details in the Payout section.</li>
+            <li><strong>PayPal:</strong> Quick international donations where available. <a href="https://www.paypal.com/" target="_blank" rel="noopener">Set up</a></li>
+            <li><strong>Mobile Money / Local:</strong> Local mobile money or bank transfer (provide details privately).</li>
+          </ul>
+
+          <p class="donation-note">If you prefer, contact me and I will send a secure payment link or invoice.</p>
+        </div>
+
+        <!-- Recurring Donation Form -->
+        <div class="card" style="padding:12px">
+          <strong>Set Up a Recurring Donation</strong>
+          <p class="muted" style="margin-top:8px">Support ongoing free resources with a monthly contribution.</p>
+
+          <form name="donation-recurring" method="POST" data-netlify="true" style="margin-top:12px">
+            <input type="hidden" name="form-name" value="donation-recurring" />
+            <label for="donor-name">Name</label>
+            <input id="donor-name" name="name" type="text" required placeholder="Your name" />
+
+            <label for="donor-email">Email</label>
+            <input id="donor-email" name="email" type="email" required placeholder="you@example.com" />
+
+            <label for="donation-amount">Monthly Amount (USD)</label>
+            <select id="donation-amount" name="amount" required>
+              <option value="5">$5 / month</option>
+              <option value="10">$10 / month</option>
+              <option value="25">$25 / month</option>
+              <option value="50">$50 / month</option>
+            </select>
+
+            <label for="method-rec">Preferred Method</label>
+            <select id="method-rec" name="method" required>
+              <option value="card">Card (Flutterwave/Stripe)</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank">Bank Debit</option>
+            </select>
+
+            <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+              <button type="submit" class="btn btn-primary" style="border:none">Start Monthly Donation</button>
+              <a class="btn-outline" href="#contact">Contact for Invoice</a>
+            </div>
+
+            <p class="donation-note">You will receive a confirmation email with next steps for setting up recurring payments.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store -->
+    <section id="store" aria-labelledby="store-title">
+      <h2 id="store-title" class="section-title">Digital Store</h2>
+      <p class="small">Instant downloads — templates, guides, and starter kits to speed up your projects.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <img src="cad.png"with="120 hight="100" alt="AutoCAD Starter Pack cover" />
+          <div class="body">
+            <strong>AutoCAD Starter Pack</strong>
+            <p>Beginner templates, PDF guide, and layer settings cheat sheet. Ready to edit and deliver.</p>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <a class="btn-card" href="https://your-payment-link.example?product=autocad-starter" aria-label="Buy AutoCAD Starter Pack">
+                <span style="font-weight:800">Buy Now</span>
+                <span class="price-badge">$12</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="FDetails.jpg"with="120 hight="100" alt="Construction Detail Guide cover" />
+          <div class="body">
+            <strong>Construction Detail Guide</strong>
+            <p>Illustrated masonry and carpentry details for builders and learners — practical and clear.</p>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <a class="btn-card" href="https://your-payment-link.example?product=construction-guide" aria-label="Get Construction Detail Guide">
+                <span style="font-weight:800">Get Guide</span>
+                <span class="price-badge">$25</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="mm.png"with="120 hight="100" alt="3D Modeling Starter Kit cover" />
+          <div class="body">
+            <strong>3D Modeling Starter Kit</strong>
+            <p>Sample models, workflow tips, and a quick tutorial to begin visualizing projects in 3D.</p>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <a class="btn-card" href="https://your-payment-link.example?product=3d-kit" aria-label="Download 3D Modeling Starter Kit">
+                <span style="font-weight:800">Download</span>
+                <span class="price-badge">$10</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="card">
+        <div style="display:flex;gap:18px;align-items:center">
+          <img src="images/bundle.jpg" alt="Complete Beginner's Bundle cover" style="width:220px;height:140px;object-fit:cover;border-radius:12px" />
+          <div style="padding:14px">
+            <strong>Complete Beginner’s Pack — Save $10</strong>
+            <p class="muted" style="margin:6px 0 0">All three products bundled for a complete toolkit: templates, guides, and 3D models.</p>
+            <div style="margin-top:12px">
+              <a class="btn btn-primary" href="https://your-payment-link.example?product=bundle" aria-label="Buy Complete Beginner's Pack">Grab the Bundle — $35</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- Store -->
+  <section id="store">
+    <h2>Digital Products</h2>
+    <div class="store-grid">
+      <div class="product-card">
+        <img src="cad.png"with="150 higth="130" alt="CAD Drawing Pack">
+        <h3>CAD Drawing Pack</h3>
+        <p>Downloadable foundation, floor plan, and detail drawings.</p>
+        <p><strong>Lonestar MoMo: 0880342933</strong></p>
+        <p><strong>Orange Money: 0775701195</strong></p>
+        <a href="https://ecobank.com/pay/yourlink" class="btn">Pay with Ecobank</a><br><br>
+        <a href="https://onedrive.live.com/?id=yourlink" class="btn-secondary">Download via OneDrive</a>
+      </div>
+    </div>
+  </section>
+   <!-- Client Work Section -->
+  <section id="client-work">
+    <h2>Client Work</h2>
+    <video controls>
+      <source src="intro.mp4" type="video/mp4"with="50 higth="40">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <p>I am <strong>Nathan Kilpoo</strong> from Monrovia, Liberia. I combine AutoCAD/Archicad drafting with hands-on carpentry and masonry experience. My mission is to empower students, freelancers, and builders with practical design tools and educational resources.</p>
+      <p class="small">Services: technical drawings, 3D visualization, construction detailing, product creation, and training materials,building cost estimation (BQO).</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Contact</h2>
+      <p class="small">Send a message or request a custom project. I typically respond within 6 hours.</p>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Your full name" />
+
+        <label for="email">Title</label>
+        <input id="service_khk2ihe" name="email" type="email" required placeholder="Title" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Tell me about your project or question"></textarea>
+
+        <div style="display:flex;gap:10px;align-items:center">
+          <button type="submit" class="btn btn-primary" style="border:none">Send Message</button>
+          <a class="btn-outline" href="mailto:nathankilpoo@gmail.com" aria-label="Email directly">Email Directly</a>
+        </div>
+
+        <p class="small" style="margin-top:10px">Or reach me on WhatsApp Business: <strong>+23188342933</strong></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 <strong>Nathan Kilpoo</strong> — Monrovia, Liberia · Hosted on Netlify</p>
+    </footer>
+  </main>
+
+  <!-- Implementation notes:
+       - Replace placeholder images in /images:
+         hero.jpg, floorplan.jpg, roof-detail.jpg, carpentry.jpg, masonry.jpg,
+         autocad-pack.jpg, construction-guide.jpg, 3d-kit.jpg, bundle.jpg,
+         project-residential.jpg, project-commercial.jpg, project-furniture.jpg, project-visual.jpg,
+         logo-client1.png, logo-client2.png, logo-client3.png, logo-client4.png,
+         payoneer.jpg, bank-transfer.jpg, card-payments.jpg, paypal.jpg
+       - Replace payment and donation links (href="https://your-payment-link.example?...") with your actual checkout URLs (Flutterwave, Payoneer, PayPal, Stripe).
+       - Replace the example bank details in the Payout section with your real Ecobank account information before sharing publicly.
+       - Netlify Forms will capture contact, comment, payout-request, and donation-recurring submissions when deployed. Configure notifications in your Netlify dashboard.
+       - For recurring donations, use your payment gateway's subscription feature (Flutterwave/Stripe/PayPal) and link the subscription confirmation URL in the form confirmation email.
+       - To change brand color, edit --brand and --brand-dark in :root.
+  -->
+</body>
+</html>
+ 
